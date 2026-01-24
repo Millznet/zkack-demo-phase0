@@ -1,0 +1,18 @@
+[package]
+license-file = "LICENSE"
+name = "zkack-watcher"
+version = "0.1.0"
+edition = "2021"
+description = "Mailbox watcher / single-file ACK poster (mock proof)."
+
+[dependencies]
+zkack-spec = { path = "../zkack-spec" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+clap = { workspace = true }
+anyhow = { workspace = true }
+reqwest = { workspace = true }
+mailparse = { workspace = true }
+time = { workspace = true }
+# needed for #[tokio::main]
+tokio = { workspace = true }

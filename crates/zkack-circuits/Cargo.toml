@@ -1,0 +1,11 @@
+[package]
+license-file = "LICENSE"
+name = "zkack-circuits"
+version = "0.1.0"
+edition = "2021"
+description = "ZK proof interfaces and mock implementation for ZK-ACK."
+
+[dependencies]
+anyhow = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }

@@ -1,0 +1,37 @@
+[workspace]
+members = [
+    "crates/zkack-spec",
+    "crates/zkack-signer",
+    "crates/zkack-verifier",
+    "crates/zkack-watcher",
+    "crates/zkack-circuits"
+]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+license = "MIT"
+authors = ["CypheraLabs <dev@cyphera.ai>"]
+rust-version = "1.75"
+
+[workspace.dependencies]
+rand = "0.8"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+time = { version = "0.3", features = ["parsing", "formatting"] }
+base64 = "0.22"
+blake3 = "1.5"
+rand_core = { version = "0.6", features = ["getrandom"] }
+ed25519-dalek = { version = "2.1", features = ["rand_core"] }
+clap = { version = "4.5", features = ["derive"] }
+anyhow = "1.0"
+thiserror = "1.0"
+uuid = { version = "1.7", features = ["v4", "serde"] }
+reqwest = { version = "0.12", features = ["json", "rustls-tls"] }
+tokio = { version = "1.39", features = ["full"] }
+axum = "0.7"
+tower = "0.4"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+sled = "0.34"
+mailparse = "0.15"

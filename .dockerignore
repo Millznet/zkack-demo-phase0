@@ -1,0 +1,8 @@
+target
+.git
+keys
+data
+**/*.bk
+**/*.bak.*
+**/*.rs.bk
+.env*

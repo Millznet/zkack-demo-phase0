@@ -1,0 +1,22 @@
+[package]
+license-file = "LICENSE"
+name = "zkack-verifier"
+version = "0.1.0"
+edition = "2021"
+description = "Axum HTTP verifier for ZK-ACK ACKs (stub proof verify)."
+
+[dependencies]
+zkack-spec = { path = "../zkack-spec" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+uuid = { workspace = true }
+axum = { workspace = true }
+tokio = { workspace = true }
+tower = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+sled = { workspace = true }
+time = { workspace = true }
+ed25519-dalek = { workspace = true }
+base64 = { workspace = true }

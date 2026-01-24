@@ -1,0 +1,12 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# env / keys (should not exist here, but safety)
+.env
+.env.*
+*.pem
+*.key
+*.p12
