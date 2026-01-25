@@ -10,3 +10,16 @@
 *.pem
 *.key
 *.p12
+
+# build output
+target/
+
+# demo-generated keys (do not commit)
+keys/dev-priv.json
+keys/pubkeys.json
+
+# generated keys (demo)
+keys/
+
+# local backups
+demo.sh.bak_*
