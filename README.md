@@ -1,28 +1,41 @@
 # ZK-ACK (Phase 0) — Public Proof Snapshot
 
-## What it is (in plain English)
+A minimal, runnable proof-of-concept for **verifiable “certified notices” sent over normal email**.
 
-ZK-ACK is a small verification layer for “certified notices” sent over normal email.  
-It lets a sender produce a **signed, tamper-evident proof** of what was sent, and lets a receiver (or auditor) **verify authenticity and integrity** later.
+This repo is intentionally small and safe to publish (no private repo history, no secrets). It’s meant for **portfolio links** and **early pilot conversations**.
 
-This Phase 0 demo shows:
-- **Signing:** generate a cryptographic proof for an email-like message
-- **Tamper detection:** demonstrate that modifying content breaks verification
-- **Audit trail:** produce verifiable artifacts you can archive or review
+---
+
+## What it is (plain English)
+
+**ZK-ACK** adds a cryptographic verification layer on top of ordinary email workflows.
+
+A sender can produce a **signed, tamper-evident proof** of what was sent, and a receiver (or auditor) can later **verify authenticity and integrity** using the proof + a digest of the message.
+
+This Phase 0 demo demonstrates:
+
+- **Signing:** generate a proof for an email-like message (`.eml`)
+- **Tamper detection:** modifying content breaks verification
+- **Verification API:** a local verifier service confirms `ok` + `digest_match`
+
+> ZK-ACK does **not** guarantee inbox delivery. It guarantees **authenticity** and **tamper-evident binding**.
+
+---
 
 ## Why it matters (use cases)
 
 - **Compliance / audit:** prove what notice was sent (and that it wasn’t altered)
 - **Dispute resolution:** independently verify contents after the fact
 - **Secure workflows:** add verification without replacing existing email systems
+- **Archival evidence:** store verifiable artifacts for later review
 
-> ZK-ACK does **not** guarantee inbox delivery; it guarantees **authenticity and tamper-evident binding**.
+---
 
-## Quick start (demo)
+## Quick start (runnable demo)
 
-**Prereqs:** Rust toolchain installed (`cargo` available)
+### Prereqs
+- Rust toolchain installed (`cargo` available)
 
-Run the Phase 0 demo:
-
+### Run
 ```bash
 bash ./demo.sh
